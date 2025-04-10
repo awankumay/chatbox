@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Chatbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f7f8fa;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      color: #555;
+      line-height: 1.5;
+    }
+    
+    .code-block {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-family: monospace;
+      margin: 20px 0;
+    }
+    
+    .highlight {
+      background-color: #e6f7ff;
+      padding: 3px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Demo Aplikasi Chatbox</h1>
+    <p>Ini adalah demonstrasi aplikasi chatbox sederhana yang dapat diembed ke situs web lain. Untuk mencoba, klik ikon chat di pojok kanan bawah.</p>
+    
+    <h2>Cara Penggunaan</h2>
+    <p>Untuk menggunakan chatbox ini di situs web Anda sendiri, tambahkan kode berikut ke dalam halaman HTML Anda:</p>
+    
+    <div class="code-block">
+      <pre><code>&lt;script type="module"&gt;
+  import ChatboxWeb from "http://localhost:3000/assets/js/web.js";
+  ChatboxWeb.init({
+    isEmbed: true,
+    secretKey: "your-secret-key",
+    baseURL: "http://localhost:3000",
+    theme: {
+      button: {
+        backgroundColor: '#4CAF50',
+        size: 'large',
+        customIcon: 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png'
+      },
+      chatWindow: {
+        welcomeMessage: 'Halo! Ada yang bisa kami bantu?'
+      }
+    }
+  });
+&lt;/script&gt;</code></pre>
+    </div>
+    
+    <h2>Fitur</h2>
+    <ul>
+      <li>UI chatbox yang responsif</li>
+      <li>Konfigurasi tampilan yang fleksibel</li>
+      <li>Mudah diintegrasikan ke situs web lain</li>
+      <li>Support untuk kustomisasi tema</li>
+    </ul>
+    
+    <h2>Konfigurasi Tersedia</h2>
+    <p>Anda dapat menyesuaikan tampilan chatbox dengan berbagai opsi konfigurasi yang tersedia. Lihat dokumentasi lengkap untuk detail selengkapnya.</p>
+  </div>
+  
+  <script type="module">
+    import ChatboxWeb from "http://localhost:5000/assets/js/web.js";
+    
+    ChatboxWeb.init({
+      isEmbed: true,
+      baseURL: "http://localhost:5000", 
+      secretKey: "123123",
+      theme: {
+        button: {
+          backgroundColor: '#4CAF50',
+          right: '20px',
+          bottom: '20px', 
+          size: 'large', // 'small', 'medium', 'large'
+          iconColor: '#ffffff',
+          customIcon: 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png'
+        },
+        chatWindow:{
+          welcomeMessage: 'Hello! How can I assist you today?',
+          inputPlaceholder: 'Ask me anything...',
+          backgroundColor: '#ffffff',
+          fontSize: '12',
+          style: {
+            height: '550px', // Total height of chatbox
+            width: '420px',  // Total width of chatbox
+          }
+        },
+        header:{
+          showTitle: true,
+          showStatus: true,
+          title: 'Support Agent',
+          titleAvatar: 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png',
+          backgroundColor: '#ffffff',
+          textColor: '#fffff',
+        },
+        footer:{
+          showFooter: true, 
+          textColor: 'black', 
+          text: "Powered by",
+          footerText: 'Owlexa Healthcare',
+          footerLink: 'https://owlexa.com',
+        }
+      }
+    });
+  </script>
+</body>
+</html>

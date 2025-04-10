@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh Embed Chatbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f2f5;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      color: #555;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contoh Embed Chatbox</h1>
+    <p>Halaman ini menunjukkan bagaimana chatbox dapat diembed ke situs web eksternal.</p>
+    <p>Chatbox diimplementasikan dengan menggunakan JavaScript dan CSS. Konfigurasi dapat disesuaikan sesuai kebutuhan.</p>
+    
+    <h2>Halaman Web Contoh</h2>
+    <p>Ini adalah konten halaman web yang meng-embed chatbox. Chatbox akan muncul sebagai ikon di pojok kanan bawah halaman.</p>
+    <p>Klik ikon tersebut untuk membuka jendela chat.</p>
+  </div>
+  
+  <script type="module">
+    import ChatboxWeb from "/assets/js/web.js";
+    
+    ChatboxWeb.init({
+      isEmbed: true,
+      secretKey: "3df20934-ba9b-4e9b-97a9-054e698c09f7",
+      baseURL: window.location.origin,
+      theme: {
+        button: {
+          backgroundColor: '#4CAF50',
+          right: '0',
+          bottom: '0',
+          size: 'large', // 'small', 'medium', 'large'
+          iconColor: '#ffffff',
+          customIcon: 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png'
+        },
+        chatWindow: {
+          welcomeMessage: 'Hello! How can I assist you today?',
+          inputPlaceholder: 'Ask me anything...',
+          backgroundColor: '#ffffff',
+          fontSize: '12',
+          style: {
+            height: '550px', // Total height of chatbox
+            width: '420px',  // Total width of chatbox
+          }
+        },
+        header: {
+          showTitle: true,
+          showStatus: true,
+          title: 'Support Agent',
+          titleAvatar: 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png',
+          backgroundColor: '#ffffff',
+          textColor: '#000000',
+        },
+        footer: {
+          showFooter: true, 
+          textColor: 'black', 
+          text: "Powered by",
+          footerText: 'Owlexa Healthcare',
+          footerLink: 'https://owlexa.com',
+        }
+      }
+    });
+  </script>
+</body>
+</html>
