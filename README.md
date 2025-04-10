@@ -6,7 +6,7 @@ Chatbox adalah widget obrolan yang ringan dan dapat disesuaikan untuk diintegras
 
 Akses Demo Lokal
 
-1. Buka browser dan kunjungi http://localhost:3000 untuk melihat demo chatbox
+1. Buka browser dan kunjungi http://localhost:5000 untuk melihat demo chatbox
 2. Klik ikon chat di pojok kanan bawah untuk membuka jendela obrolan
 3. Coba kirim pesan untuk menguji fungsionalitas dasar (dalam demo ini, bot akan mengulang pesan yang sama sebagai respons)
 
@@ -41,5 +41,3 @@ Konfigurasi Utama
 | isEmbed    | Boolean  | Menentukan apakah chatbox di-embed di aplikasi lain   |
 | secretKey  | String   | Kunci rahasia untuk autentikasi (opsional)            |
 | baseURL    | String   | URL dasar ke server chatbox                           |
-
-Konfigurasi Tema
